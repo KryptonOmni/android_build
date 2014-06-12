@@ -517,13 +517,8 @@ else if get_stage("%(bcb_dev)s", "stage") == "3/3" then
     script.FormatPartition("/data", OPTIONS.mount_by_label)
 
   script.Print("#######################################");
-  script.Print("# _____            __  __  ______     #");
-  script.Print("#/\  __`\  /'\_/`\/\ \/\ \/\__  _\    #");
-  script.Print("#\ \ \/\ \/\  ``  \ \ ` \ \/_/\ \/    #");
-  script.Print("# \ \ \ \ \ \ \__\ \ \ . ` \ \ \ \    #");
-  script.Print("#  \ \ \_\ \ \ \_/\ \ \ \`\ \ \_\ \__ #");
-  script.Print("#   \ \_____\ \_\, \_\ \_\ \_\/\_____\#");
-  script.Print("#    \/_____/\/_/ \/_/\/_/\/_/\/_____/#");
+  script.Print("#                                     #");
+  script.Print("#            KryptonRom 2.0           #");
   script.Print("#                                     #");
   script.Print("#######################################");
 
@@ -559,11 +554,10 @@ else if get_stage("%(bcb_dev)s", "stage") == "3/3" then
     script.RunBackup("restore")
 
   script.ShowProgress(0.2, 10)
-  script.Print("Flashing boot.img")
   script.WriteRawImage("/boot", "boot.img")
 
   script.ShowProgress(0.1, 0)
-  script.Print("Enjoy OMNI ROM!");
+  script.Print("Instalación finalizada!");
   device_specific.FullOTA_InstallEnd()
 
   if OPTIONS.extra_script is not None:
